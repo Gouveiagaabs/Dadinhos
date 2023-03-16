@@ -6,28 +6,44 @@ d8 = [1,2,3,4,5,6,7,8]
 d10 = [1,2,3,4,5,6,7,8,9,10]
 d20 = []
 d100 = []
+contador = 0
 for d in range (1,21):
     d20.append(d)
 for c in range(1, 101):
     d100.append(c)
-escolha = int(input("escolha o número de faces do dado: 4, 6, 8, 10, 20, 100: "))
-if escolha == 4:
-    resultadoD4 = random.choice(d4)
-    print("Você escolheu 1d4. O número sorteado foi: " +str(resultadoD4))
-elif escolha == 6:
-    resultadoD6 = random.choice(d6)
-    print("Você escolheu 1d6. O número sorteado foi: " +str(resultadoD6))
-elif escolha == 8:
-    resultadoD8 = random.choice(d8)
-    print("Você escolheu 1d8. O número sorteado foi: " +str(resultadoD8))
-elif escolha == 10:
-    resultadoD10 = random.choice(d10)
-    print("Você escolheu 1d10. O número sorteado foi: " +str(resultadoD10))
-elif escolha == 20:
-    resultadoD20 = random.choice(d20)
-    print("Você escolheu 1d20. O número sorteado foi: " +str(resultadoD20))
-elif escolha == 100:
-    resultadoD100 = random.choice(d100)
-    print("Você escolheu 1d100. O número sorteado foi: " +str(resultadoD100))
-else:
-    print("Por favor, insira uma quantidade válida.")
+while contador == 0:
+    escolha = int(input("escolha o número de faces do dado: 4, 6, 8, 10, 20, 100: "))
+    mod = int(input("escolha um valor para o modificador: "))
+    if escolha == 4:
+        resultadoD4 = random.choice(d4)
+        soma = mod+resultadoD4
+        print("Você escolheu 1d4. O número sorteado foi: " +str(resultadoD4)+ " + " +str(mod)+ " = " +str(soma))
+        print()
+    elif escolha == 6:
+        resultadoD6 = random.choice(d6)
+        soma = mod + resultadoD6
+        print("Você escolheu 1d6. O número sorteado foi: " +str(resultadoD6)+ " + " +str(mod)+ " = " +str(soma))
+        print()
+    elif escolha == 8:
+        resultadoD8 = random.choice(d8)
+        soma = mod + resultadoD8
+        print("Você escolheu 1d8. O número sorteado foi: " +str(resultadoD8)+ " + " +str(mod)+ " = " +str(soma))
+        print()
+    elif escolha == 10:
+        resultadoD10 = random.choice(d10)
+        soma = mod + resultadoD10
+        print("Você escolheu 1d10. O número sorteado foi: " +str(resultadoD10)+ " + " +str(mod)+ " = " +str(soma))
+        print()
+    elif escolha == 20:
+        resultadoD20 = random.choice(d20)
+        soma = mod + resultadoD20
+        print("Você escolheu 1d20. O número sorteado foi: " +str(resultadoD20)+ " + " +str(mod)+ " = " +str(soma))
+        print()
+    elif escolha == 100:
+        resultadoD100 = random.choice(d100)
+        soma = mod + resultadoD100
+        print("Você escolheu 1d100. O número sorteado foi: " +str(resultadoD100)+ " + " +str(mod)+ " = " +str(soma))
+        print()
+    else:
+        print("Por favor, insira uma quantidade válida.")
+        print()
